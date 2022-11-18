@@ -2,12 +2,11 @@ const mongoose = require('mongoose');
 
 require('dotenv').config();
 
-mongoose.connect("mongodb+srv://lali:lalilali@cluster1.t0ay4ec.mongodb.net/fcc-mongodb-and-mongoose?retryWrites=true&w=majority",
+mongoose.connect(process.env.MONGO_URI,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true
-  });
-
+  })
 
 let Person;
 
